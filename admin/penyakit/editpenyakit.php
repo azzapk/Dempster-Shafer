@@ -12,7 +12,6 @@ if ($kdubah != "") {
   $edit_kdpenyakit = $data['kdpenyakit'];
   $edit_penyakit = $data['nama_penyakit'];
   $edit_definisi = $data['definisi'];
-  $edit_solusi = $data['solusi'];
 }
 ?>
 <!DOCTYPE html>
@@ -29,11 +28,11 @@ if ($kdubah != "") {
 
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
 
   <div class="card col-md-6 mx-auto mt-5">
     <div class="card-body">
-      <h4 class="text-center">Edit Data Penyakit & Solusi</h4>
+      <h4 class="text-center">Edit Data Penyakit</h4>
       <form method="post" action="./editpenyakit2.php">
         <div class="form-group mb-2">
           <label for="kdpenyakit">Kode Penyakit :</label>
@@ -47,10 +46,6 @@ if ($kdubah != "") {
         <div class="form-group mb-2">
           <label for="definisi">Definisi Penyakit :</label>
           <textarea class="form-control" rows="3" id="edit_definisi" name="edit_definisi"><?php echo $edit_definisi; ?></textarea>
-        </div>
-        <div class="form-group">
-          <label for="solusi">Solusi Penyakit :</label>
-          <textarea class="form-control" rows="3" id="edit_solusi" name="edit_solusi"><?php echo $edit_solusi; ?></textarea>
         </div>
         <div class="d-grid gap-2">
           <button type="submit" name="simpan" id="simpan" class="btn btn-primary mt-4 btn-sm">Update</button>

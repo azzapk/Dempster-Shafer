@@ -50,7 +50,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -83,7 +83,7 @@
         <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
           <li>
             <a href="../penyakit/penyakit.php">
-              <span>Data Penyakit dan Solusi</span>
+              <span>Data Penyakit</span>
             </a>
           </li>
           <li>
@@ -169,7 +169,7 @@
               $kdsakit = $_GET['data'];
               $sql = "SELECT * FROM tb_rules,tb_gejala WHERE tb_rules.id_penyakit='$kdsakit' AND tb_gejala.id=tb_rules.id_gejala ";
             } else {
-              $sql = "SELECT * FROM tb_rules,tb_gejala WHERE tb_gejala.id=tb_rules.id_gejala ";
+              $sql = "SELECT * FROM tb_rules,tb_gejala WHERE tb_gejala.id=tb_rules.id_gejala group by tb_gejala.id;";
             }
             $qry = mysqli_query($koneksi, $sql) or die("SQL Error" . mysqli_error($koneksi));
             $no = 0;

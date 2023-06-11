@@ -99,7 +99,7 @@
   </script>
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -132,7 +132,7 @@
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="../penyakit/penyakit.php">
-              <span>Data Penyakit dan Solusi</span>
+              <span>Data Penyakit</span>
             </a>
           </li>
           <li>

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
   <?php
   include "../koneksi.php";
 

@@ -11,19 +11,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
   <?php
   include "../koneksi.php";
   $kdpenyakit = $_POST['kdpenyakit'];
   $nama_penyakit = $_POST['nama_penyakit'];
   $definisi = $_POST['definisi'];
-  $solusi = $_POST['solusi'];
 
   //cek keberadaan data
   $sqlrs = mysqli_query($koneksi, "SELECT kdpenyakit FROM tb_penyakit WHERE kdpenyakit='$kdpenyakit'");
   $rs = mysqli_num_rows($sqlrs);
   if ($rs == 0) {
-    $perintah = "INSERT INTO tb_penyakit(kdpenyakit,nama_penyakit,definisi,solusi)VALUES('$kdpenyakit','$nama_penyakit','$definisi','$solusi')";
+    $perintah = "INSERT INTO tb_penyakit(kdpenyakit,nama_penyakit,definisi)VALUES('$kdpenyakit','$nama_penyakit','$definisi')";
     $berhasil = mysqli_query($koneksi, $perintah);
 
     //jika data berhasil disimpan

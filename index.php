@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dempster Shafer</title>
+  <title>DISGUESSe</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -32,19 +32,14 @@
 
   <style>
     .konsul {
-      background-color: #4154f1;
+      background-image: url(./assets/img/btn.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       border: none;
       color: white;
-      padding: 15px 32px;
-      border-radius: 3px;
-    }
-
-    .konsul:hover {
-      background-color: #717ff5;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      border-radius: 3px;
+      padding: 8px 32px;
+      border-radius: 50px;
     }
 
     .adm {
@@ -65,46 +60,40 @@
   </style>
 </head>
 
-<body>
-
-  <!-- <h1 class="text-center mt-5">Ini halaman Awal Sistem Pakar</h1> -->
-
-  <!-- <a href="./admin/login.php" type="button" class="btn btn-primary btn-sm ms-3">Login Admin</a> <br> <br> -->
-  <!-- <a href="./konsultasi.php" type="button" class="btn btn-primary btn-sm ms-3">Mulai konsultasi</a> -->
-
+<body style="background-image: url(./assets/img/bg_index.png); background-size: cover; background-repeat: no-repeat ;">
   <section>
     <!-- Awal Container -->
     <div class="container-fluid">
       <!-- Awal Navbar -->
-      <nav class="navbar navbar-expand-lg" style="background-color: #4154f1;">
-        <div class="container">
-          <a class="navbar-brand text-white fw-bold">Dempster Shafer</a>
-          <a class="nav-link active adm1 p-2" aria-current="page" href="./index.php"><i class="bi bi-house-fill"></i> Home</a>
-          <a class="nav-link active adm1 p-2 me-auto" aria-current="page" href="./daftarpenyakit.php"><i class="bi bi-journal-text"></i> Daftar Penyakit</a>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <!-- <a class="nav-link active text-white p-2" aria-current="page" href="#"><i class="bi bi-house-door-fill"></i> Home</a>
-            <a class="nav-link active text-white p-2" aria-current="page" href="./daftarpenyakit.php"><i class="bi bi-pencil-fill"></i> Daftar Penyakit</a> -->
-            <a href="./admin/login.php" type="submit" class=" adm me-md-2"><i class="bi bi-box-arrow-in-right"></i>
-              Login Admin</a>
-            <!-- <a href="./admin/login.php" type="submit" class="btn btn-light me-md-2"><i class="bi bi-box-arrow-in-right"></i>
-              Login Admin</a> -->
-          </div>
+      <nav class="navbar navbar-expand-lg" style="background-color: white;">
+        <img src="./assets/img/logo.png" class="float-end me-1" height="60px">
+        <a class="navbar-brand fw-bold" style="color: #f29faf;"> DISGUESSe</a>
+        <div class="container p-2" style="justify-content: space-evenly;">
+          <a class="nav-link" aria-current="page" href="./index.php" style="color: #f29faf;"><b>HOME</b></a>
+          <a class="nav-link" aria-current="page" href="./daftarpenyakit.php" style="color: #f29faf;"><b>SKIZOFRENIA</b></a>
+          <a class="nav-link" aria-current="page" href="./konsultasi.php" style="color: #f29faf;"><b>CONSULTATION</b></a>
         </div>
-      </nav>
-      <!-- Akhir Navbar -->
-      <br> <br> <br> <br> <br> <br>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a href="./admin/login.php" type="submit" class="konsul">LOGIN</a>
+        </div>
+    </div>
+    </nav>
+    <!-- Akhir Navbar -->
+    <br> <br> <br> <br> <br>
 
-      <!-- Jumbotron -->
-      <div class="bg-light p-5 mb-4 rounded">
-        <!-- <img src="" class="float-end me-5" width="400px"> -->
+    <!-- Jumbotron -->
+    <div class="container" style="margin: 0px 350px;">
+      <div class="bg p-5 mb-5 rounded">
         <div class="container-fluid ms-5">
-          <h1 class="fw-bold datang">Selamat Datang</h1>
-          <!-- <h3 class="fw-bold">Sistem Pakar penyakit Lumpuh Bebek <br> dengan Metode Dempster Shafer</h3> -->
-          <p>Sistem Pakar penyakit Lumpuh Bebek ini adalah sebuah sistem yang digunakan <br> untuk mendiagnosa awal jenis penyakit yang menyerang pada bebek berdasarkan <br> gejala yang dialami bebek. Proses diagnosa dengan menentukan gejala-gejala yang <br> terjadi pada bebek, dengan menggunakan metode Dempster Shafer maka sistem dapat <br> memberikan keputusan tentang hasil diagnosa awal.</p>
-          <a href="./konsultasi.php" type="button" class="konsul">Mulai Konsultasi</a>
+          <h1 class="fw-bold datang" style="color: #6a6ac0;">DIAGNOSA <i class="bi bi-stars"></i><br>dini SKIZOFRENIA</h1>
+          <p style="color: #6dcab8;"><i>Sistem diagnosa dini mengenai jenis gangguan jiwa <u>SKIZOFRENIA</u></i></p>
         </div>
       </div>
-      <!-- Akhir jumbotron -->
+      <div class="container" style="margin-left: 500px;">
+        <a href="./konsultasi.php" type="button" class="konsul">Konsultasi<i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+    <!-- Akhir jumbotron -->
     </div>
     <!-- Akhir Container -->
   </section>

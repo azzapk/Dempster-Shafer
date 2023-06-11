@@ -27,7 +27,7 @@ if ($id != "") {
 
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
 
   <div class="card col-md-5 mx-auto mt-5">
     <div class="card-body">

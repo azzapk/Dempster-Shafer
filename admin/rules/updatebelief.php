@@ -50,7 +50,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
   <?php
   include "../koneksi.php";
   $kd_gejala = $_GET['id_gejala'];

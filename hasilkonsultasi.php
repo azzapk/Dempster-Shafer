@@ -47,21 +47,22 @@ session_start();
     }
 
     .diagnosa {
+      padding-top: 10px;
+      padding-bottom: 10px;
       margin: 10px;
       max-height: 300px;
       overflow: auto;
-      border: 3px solid #a3f0ff;
       letter-spacing: 2px;
       text-align: center;
     }
   </style>
 </head>
 
-<body>
+<body style="background-image: url(./assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
   <div class="container">
-    <h1 class="text-center mt-5">Hasil Diagnosa Penyakit Lumpuh Bebek</h1>
+    <h1 class="text-center mt-5" style="color: #6a6ac0;">Hasil Diagnosa Jenis Skizofrenia</h1>
     <?php
-    $koneksi = mysqli_connect("localhost", "root", "", "dbpakar");
+    $koneksi = mysqli_connect("localhost", "root", "root", "dbpakar");
 
     // cek koneksi
     if (mysqli_connect_errno()) {
@@ -186,12 +187,8 @@ session_start();
         echo "<br>";
         echo "<b>Kesimpulan Hasil Diagnosa :</b>";
         echo "<br>";
-        // echo "<br>";
-        echo " <p class=\"diagnosa\">Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan sebesar <b>" . round($densitas_baru[$codes[0]] * 100, 2) . "%</b></p>";
+        echo " <div class='rounded-1' style='background-color: #f29faf; color: #6a6ac0;'><p class=\"diagnosa\">Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan sebesar <b>" . round($densitas_baru[$codes[0]] * 100, 2) . "%</b></p></div>";
         echo "<br>";
-        // echo "<br>";
-        echo "<b><p style = 'text-align:center;'> Saran :</b></p> ";
-        echo "<p style='margin: 10px;max-height:300px;overflow:auto; border:3px solid #a3f0ff ; letter-spacing:2px;'>" . $dataS['solusi'] . "</p>";
       }
     }
     ?>

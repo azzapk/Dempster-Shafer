@@ -42,10 +42,21 @@
     .warning {
       color: #daa812;
     }
+
+    .konsul {
+      background-image: url(./assets/img/btn.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+      color: white;
+      padding: 8px 32px;
+      border-radius: 50px;
+    }
   </style>
 </head>
 
-<body>
+<body style="background-image: url(./assets/img/bg_jenis_1.png); background-size: cover; background-repeat: no-repeat ;">
   <?php
   include './admin/koneksi.php';
   // mengaktifkan session
@@ -53,44 +64,46 @@
   ?>
 
   <section>
-    <div class="card mt-4 col-md-10 mx-auto">
+
+    <!-- Awal Container -->
+    <div class="container-fluid">
+      <!-- Awal Navbar -->
+      <nav class="navbar navbar-expand-lg" style="background-color: white;">
+        <img src="./assets/img/logo.png" class="float-end me-1" height="60px">
+        <a class="navbar-brand fw-bold" style="color: #f29faf;"> DISGUESSe</a>
+        <div class="container p-2" style="justify-content: space-evenly;">
+          <a class="nav-link" aria-current="page" href="./index.php" style="color: #f29faf;"><b>HOME</b></a>
+          <a class="nav-link" aria-current="page" href="./daftarpenyakit.php" style="color: #f29faf;"><b>SKIZOFRENIA</b></a>
+          <a class="nav-link" aria-current="page" href="./konsultasi.php" style="color: #f29faf;"><b>CONSULTATION</b></a>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a href="./admin/login.php" type="submit" class="konsul">LOGIN</a>
+        </div>
+    </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <div class="card mt-4 col-md-10 mx-auto" style="background-color: rgba(255, 255, 255, 0.5);">
       <div class="card-body">
-        <div class="mt-4">
-          <a href="./index.php" type="button" class="btn btn-outline-danger btn-sm ms-3"><i class="bi bi-box-arrow-left"></i> Kembali</a>
+        <div class="container" style="text-align: center;">
+          <h1 class="fw-bold datang" style="color: #6a6ac0;">jenis - jenis <i class="bi bi-stars"></i><br>SKIZOFRENIA</h1>
         </div>
         <div class="table-responsive mt-4">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th><b>No</b></th>
-                <th class="text-center"><strong>Deskripsi Penyakit</strong></th>
-              </tr>
-            </thead>
+          <table class="table" style="border-collapse: collapse;">
             <?php
             include "./admin/koneksi.php";
             $sql = "SELECT * FROM tb_penyakit ORDER BY kdpenyakit";
             $qry = mysqli_query($koneksi, $sql) or die("SQL Error" . mysqli_error($koneksi));
             $no = 0;
             while ($data = mysqli_fetch_array($qry)) {
-              $no++;
             ?>
               <tbody>
                 <tr>
                   <td>
-                    <div align="center"><?php echo $no; ?></div>
-                  </td>
-                  <td>
                     <div align="justify">
-                      <div align="left"><?php echo "<h4><em>$data[nama_penyakit]</em></h4>"; ?></div>
-                      <ul>
-                        <li><label>Definisi Penyakit :</label>
-                          <p class="text-info"><?php echo "$data[definisi]"; ?></p>
-                        </li>
-                        <li><label>Saran :</label>
-                          <p class="warning"><?php echo "$data[solusi]"; ?></p>
-                        </li>
-                      </ul>
-
+                      <div align="left"><h3><b style="color: #f29faf;"><?php echo "$data[nama_penyakit]"; ?></b></h3></div>
+                      <div align="left"><p class="text-info" style="color: #6dcab8;"><?php echo "$data[definisi]"; ?></p></div>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -98,6 +111,9 @@
             }
             ?>
           </table>
+        </div>
+        <div class="mt-4" style="text-align: right;">
+          <a href="./index.php" type="button" class="btn btn-outline-danger btn-sm ms-3"><i class="bi bi-box-arrow-left"></i> Kembali</a>
         </div>
       </div>
     </div>

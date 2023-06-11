@@ -11,15 +11,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
   <?php
   include "../koneksi.php";
 
   $kdpenyakit = $_POST['kdpenyakit'];
   $penyakit = $_POST['edit_penyakit'];
   $definisi = $_POST['edit_definisi'];
-  $solusi = $_POST['edit_solusi'];
-  $sql = "UPDATE tb_penyakit SET nama_penyakit='$penyakit',definisi='$definisi', solusi='$solusi' WHERE id='$kdpenyakit'";
+  $sql = "UPDATE tb_penyakit SET nama_penyakit='$penyakit',definisi='$definisi' WHERE id='$kdpenyakit'";
   $result = mysqli_query($koneksi, $sql) or die("SQL Error" . mysqli_error($koneksi));
 
   if ($result) {

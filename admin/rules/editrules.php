@@ -73,7 +73,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
   <section>
     <form id="form1" name="form1" method="post" action="./updaterules.php" enctype="multipart/form-data">
       <div class="mt-5">

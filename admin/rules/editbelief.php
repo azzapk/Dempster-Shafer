@@ -64,7 +64,7 @@
   </style>
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
   <section>
     <div class="row mt-5 mx-auto">
       <div class="col-md-8 mt-2 mx-auto">

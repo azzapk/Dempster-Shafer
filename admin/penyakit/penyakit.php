@@ -58,7 +58,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_jenis_2.png); background-size: cover; background-repeat: no-repeat ;">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -91,7 +91,7 @@
         <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
             <a href="../penyakit/penyakit.php" class="active">
-              <span>Data Penyakit dan Solusi</span>
+              <span>Data Penyakit</span>
             </a>
           </li>
           <li>
@@ -133,12 +133,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Data Penyakit dan Solusi</h1>
+      <h1>Data Penyakit</h1>
       <nav style="--bs-breadcrumb-divider: '>';">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Admin</a></li>
           <li class="breadcrumb-item">Master Data</li>
-          <li class="breadcrumb-item active">Data Penyakit dan Solusi</li>
+          <li class="breadcrumb-item active">Data Penyakit</li>
         </ol>
       </nav>
       <hr>
@@ -161,7 +161,6 @@
                   <th>Kode Penyakit</th>
                   <th>Nama Penyakit</th>
                   <th>Definisi</th>
-                  <th>Solusi</th>
                   <th>Edit</th>
                   <th>Delete<input type="hidden" id="texthapus"></th>
                 </tr>
@@ -180,7 +179,6 @@
                     <td><?php echo $data['kdpenyakit']; ?></td>
                     <td><?php echo $data['nama_penyakit']; ?></td>
                     <td><?php echo $data['definisi']; ?></td>
-                    <td><?php echo $data['solusi']; ?></td>
                     <td><a href="./editpenyakit.php?kdubah=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm">Edit</a></td>
                     <td><a onClick="return HapusData('<?php echo $data['id']; ?>');" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapusmodal">Delete</a>
                     </td>
@@ -199,7 +197,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title mx-auto">Tambah Data Penyakit & Solusi</h5>
+          <h5 class="modal-title mx-auto">Tambah Data Penyakit</h5>
         </div>
         <div class="modal-body">
           <form method="post" action="./simpanpenyakit.php">
@@ -214,10 +212,6 @@
             <div class="form-group mb-2">
               <label for="definisi">Definisi Penyakit :</label>
               <textarea class="form-control" rows="3" id="definisi" name="definisi"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="solusi">Solusi Penyakit :</label>
-              <textarea class="form-control" rows="3" id="solusi" name="solusi"></textarea>
             </div>
             <div class="d-grid gap-2">
               <button type="submit" class="btn btn-primary mt-4 btn-sm">Simpan</button>

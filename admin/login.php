@@ -36,22 +36,19 @@ include "./koneksi.php";
 
   <style>
     .login {
-      background-color: #4154f1;
+      background-image: url(../assets/img/btn.png);
+      background-repeat: no-repeat;
+      background-position: center;
       border: none;
       color: white;
-      padding: 7px 15px;
-      border-radius: 3px;
-    }
-
-    .login:hover {
-      background-color: #717ff5;
-      border: none;
+      padding: 8px 32px;
+      border-radius: 50px;
     }
   </style>
 
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_login.png); background-size: cover; background-repeat: no-repeat ;">
 
   <main>
     <div class="container">
@@ -61,18 +58,11 @@ include "./koneksi.php";
           <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
-              <div class="d-flex justify-content-center py-4">
-                <!-- <a href="index.html" class="logo d-flex align-items-center w-auto">
-                  <img src="assets/img/logo.png" alt="">
-                  <span class="d-none d-lg-block">Sistem Pakar</span>
-                </a> -->
-                <h5 class="d-none d-lg-block">Login Setting Sistem Pakar</h5>
-              </div><!-- End Logo -->
-
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="pt-2 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Login Admin</h5>
+                    <h5 class="card-title text-center pb-0 fs-1" style="color: #6a6ac0;">WELCOME<br>back <i class="bi bi-dash-lg"></i><i class="bi bi-stars"></i></h5>
+                    <br>
                   </div>
                   <?php
                   if (isset($_GET['pesan'])) {
@@ -82,19 +72,18 @@ include "./koneksi.php";
                   ?>
 
                   <form action="./loginkoneksi.php" method="POST" class="row g-3">
-
                     <div class="col-12">
-                      <label for="username" class="form-label">Username</label>
                       <div class="input-group">
-                        <input type="text" name="username" class="form-control" id="username" autofocus placeholder="Masukkan username">
+                        <input type="text" name="username" class="form-control" id="username" autofocus placeholder="Username">
                         <div class="invalid-feedback">Silahkan masukkan username Anda!</div>
                       </div>
+                      <br>
                     </div>
-
+                    
                     <div class="col-12">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="password" required placeholder="Masukkan password">
+                      <input type="password" name="password" class="form-control" id="password" required placeholder="P assword">
                       <div class="invalid-feedback">Silahkan masukkan password Anda!</div>
+                      <br>
                     </div>
 
                     <div class="col-12 pt-2">
@@ -103,10 +92,6 @@ include "./koneksi.php";
                     </div>
                   </form>
                 </div>
-              </div>
-
-              <div class="credits">
-                Sistem Pakar <a href="">Dempster Shafer</a>
               </div>
             </div>
           </div>

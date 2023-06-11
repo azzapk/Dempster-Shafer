@@ -42,7 +42,7 @@ if ($_SESSION['status'] != "login") {
 
 </head>
 
-<body>
+<body style="background-image: url(../assets/img/bg_login.png); background-size: cover; background-repeat: no-repeat ;">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -76,7 +76,7 @@ if ($_SESSION['status'] != "login") {
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="./penyakit/penyakit.php">
-              <span>Data Penyakit dan Solusi</span>
+              <span>Data Penyakit</span>
             </a>
           </li>
           <li>
@@ -129,12 +129,7 @@ if ($_SESSION['status'] != "login") {
     </div><!-- End Page Title -->
 
     <section>
-      <h1>Selamat Datang Admin</h1>
-      <br>
-      <p>Sistem Pakar penyakit Lumpuh Bebek ini adalah sebuah sistem yang digunakan untuk mendiagnosa awal jenis
-        penyakit yang menyerang pada bebek berdasarkan gejala yang dialami bebek. Proses diagnosa dengan menentukan
-        gejala-gejala yang terjadi pada bebek, dengan menggunakan metode Dempster Shafer maka sistem dapat memberikan
-        keputusan tentang hasil diagnosa awal.</p>
+      <h1>Welcome Back Admin</h1>
     </section>
   </main><!-- End #main -->
 
